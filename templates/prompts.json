@@ -1,0 +1,16 @@
+{
+  "_cast": "Paste the cast lines from art-direction.md word for word into every plate prompt that shows a character, and attach the same reference image.",
+  "plates": {
+    "act1-desk": "Use your image generation tool to create ONE landscape image (the widest aspect available, photographic). Keep the <cast> from the attached reference exactly the same characters: <cast lines, word for word>. Scene: <what is in frame, where everyone is, one clear action frozen mid-moment>. <Lighting>, <lens and depth of field>, <film stock and period look>. No readable text, no logos, no words, no letters anywhere in the image. Save the final image as act1-desk.png in the current directory, then print its pixel size.",
+    "act2-screen": "Use your image generation tool to create ONE landscape image, 3:2 aspect. <Scene with a monitor or phone facing camera, its screen a flat, evenly lit solid colour so the real UI can be pinned into it later>. <Lighting, lens, period>. No readable text, no logos, no words, no letters anywhere in the image. Save the final image as act2-screen.png in the current directory, then print its pixel size."
+  },
+  "motion": {
+    "act1-desk": "Locked-off camera, no camera movement. <One action by one character, in plain verbs>. <One small ambient motion, e.g. the monitors flicker>. Everything else stays exactly as in the image.",
+    "act2-screen": "Locked-off camera, no camera movement, the monitor screen stays perfectly still. <One action>. Nothing else changes."
+  },
+  "sfx": {
+    "whoosh": ["clean modern whoosh transition, airy and fast, no impact", 0.7],
+    "ui-confirm": ["soft modern UI confirmation chime, two gentle rising notes, warm and minimal", 0.6],
+    "riser": ["tension riser building up for two seconds, reverse cymbal and rising synth", 2]
+  }
+}

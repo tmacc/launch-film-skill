@@ -1,0 +1,14 @@
+# Optional Higgsfield provider
+
+Documentation reviewed 8 October 2026. Account access, CLI execution and generation remain untested. This adapter describes an optional route; the Remotion starter works without it.
+
+Sources: [official generation skill](https://github.com/higgsfield-ai/skills/tree/main/higgsfield-generate), [media inputs](https://github.com/higgsfield-ai/skills/blob/main/higgsfield-generate/references/media-inputs.md), [installation](https://github.com/higgsfield-ai/skills/blob/main/INSTALL.md). Consult current upstream documentation rather than copying its defaults. Our user-approved budget and asset choices govern execution.
+
+1. Ask whether the user wants connected generation or copy-paste prompts. Reuse their configured tool if available. For CLI installation/authentication, show the official instructions and obtain authorization; the user enters credentials. Never store keys in film files.
+2. Discover the full catalogue with `higgsfield model list --json`, then inspect the chosen ID with `higgsfield model get <model-id> --json`. Match required reference roles and settings. Workflows have separate discovery: `higgsfield workflow list` and `higgsfield workflow get <name>`. Treat any proposed command as untested until verified with the installed CLI.
+3. Prepare the exact prompt and settings; bind references to identity, setting, camera, start/end frames. Follow the schema’s accepted flags. Local media paths are automatically uploaded on submission: show the user which files will leave their machine.
+4. Obtain the live credit quote using the installed CLI’s cost command (inspect its help for the selected model). Show model, files, settings, credits and the total approved batch budget. If quoting is unavailable, stop before generation and have the user review the platform’s quote. An existing subscription does not authorize spending credits. Do not inherit upstream advice to skip cost estimates.
+5. After approval, submit the validated job with `higgsfield generate create <model-id> ... --wait --json`. Pass only schema-supported settings/media roles. Inspect returned adjustments and failures; a changed required setting needs review. Keep generated audio muted or separate when the film uses its own score.
+6. Download the result to `public/motion/` or `public/plates/`, record provenance/settings/approval/job ID in the generation log, then show the take for approval. Inspect identity drift, unexpected cuts and screen geometry before assembly. Never fall back to a mode that drops references.
+
+Manual fallback: give a shot card with prompt, named input files/roles, selected model, settings and desired end state. The user uploads these in Higgsfield and returns the chosen result. Record actual settings and mark execution as user-operated. Keep exact product UI and type in Remotion.

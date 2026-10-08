@@ -1,0 +1,17 @@
+{
+  "title": "My film",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "bpm": 96,
+  "downbeat": 0,
+  "beatsPerBar": 4,
+  "length": 30,
+  "music": "",
+  "supersUnit": "bar",
+  "supers": [
+    ["Your company, run by a team of agents.", 1.5, 4],
+    ["It works while you sleep.", 5, 7],
+    ["It runs. You decide.", 9, 11]
+  ]
+}
